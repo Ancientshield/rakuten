@@ -2,7 +2,7 @@
 
 <%= link_to "New Member", new_member_path %>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <td>No.</td>
@@ -18,8 +18,8 @@
       <td><%= member.name %></td>
       <td><%= member.phone %></td>
       <td><%= member.email %></td>
+      <td><%= link_to 'Edit', edit_member_path(member) %></td>
       <td>
-        <%= link_to 'Edit', edit_member_path(member) %>
         <%= link_to 'Delete', member_path(member), method: 'delete', data: {confirm: "Are you sure you want to delete?" } %>
       </td>
     </tr>

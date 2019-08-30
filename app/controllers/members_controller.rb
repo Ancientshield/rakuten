@@ -1,10 +1,13 @@
 class MembersController < ApplicationController
+  before_action :find_member, only: [:edit, :update, :destroy]
   def index
     @members = Member.all
   end
+
   def new
     @member = Member.new
   end
+
   def create
     @member = Member.new(member_params)
     if @member.save
@@ -13,15 +16,29 @@ class MembersController < ApplicationController
       render :new
     end
   end
-  
+
   def edit
-    @member = Member.find_by(id: params[:id])
   end
 
+  def update
+    if @member.update(member_params)
+      redirect_to  members_path, notice: 'member profile updated!'
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @member.destroy if @member
+    redirect_to members_path, notice: 'member profile deteled!'
+  end
 
   private
   def member_params
     params.require(:member).permit(:name, :phone, :email)
   end
 
+  def find_member
+    @member = Member.find_by(id: params[:id])
+  end
 end

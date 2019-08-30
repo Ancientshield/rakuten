@@ -5,10 +5,12 @@ ruby '2.6.0'
 
 gem 'simple_form', '~> 4.1'
 gem 'pg', '~> 1.1', '>= 1.1.4'
+gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
+gem 'sassc-rails', '~> 2.1', '>= 2.1.2'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.5'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.0'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
