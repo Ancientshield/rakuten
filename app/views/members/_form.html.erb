@@ -1,0 +1,8 @@
+<%= simple_form_for(member) do |m| %>
+<%= m.input :name, label: "Name" %>
+<%= m.input :phone, label: "Phone" %>
+<%= m.input :email, label: "E-mail" %>
+<%= m.submit %>
+<% end %>
+
+<%= link_to 'Back to Members List', members_path %>
