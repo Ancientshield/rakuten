@@ -1,0 +1,24 @@
+<h1>Members List</h1>
+
+<%= link_to "New Member", new_member_path %>
+
+<table>
+  <thead>
+    <tr>
+      <td>No.</td>
+      <td>Name</td>
+      <td>Phone</td>
+      <td>E-mail</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @members.each do |m| %>
+    <tr>
+      <td><%= m.id %></td>
+      <td><%= m.name %></td>
+      <td><%= m.phone %></td>
+      <td><%= m.email %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
