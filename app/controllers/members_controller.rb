@@ -9,7 +9,9 @@ class MembersController < ApplicationController
   end
 
   def create
+    # if Member.where(name != :name)
     @member = Member.new(member_params)
+    # end
     if @member.save
       redirect_to members_path, notice: "new member created success."
     else
