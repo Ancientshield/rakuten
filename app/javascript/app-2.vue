@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app-2">
     <p>{{ message }}</p>
   </div>
 </template>
@@ -8,15 +8,11 @@
 export default {
   data: function() {
     return {
-      message: "Hello Vue!"
+      message: "頁面載入時間" + new Date().toLocaleString()
     };
   }
 };
 </script>
 
 <style scoped>
-p {
-  font-size: 2em;
-  text-align: center;
-}
 </style>

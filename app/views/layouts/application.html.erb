@@ -6,15 +6,24 @@
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
-  <%= javascript_pack_tag 'hello_vue' %>
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'true' %>
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'true' %>
+
+  <%#= javascript_pack_tag 'hello_vue' %>
+  <%#= stylesheet_pack_tag 'hello_vue' %>
+
+  <%= javascript_pack_tag 'main' %>
+  <%= stylesheet_pack_tag 'main' %>
+
 </head>
 
 <body>
   <div class="container">
     <%= yield %>
   </div>
+  <script src="//unpkg.com/babel-polyfill@latest/dist/polyfill.min.js"></script>
+  <script src="//unpkg.com/tether@latest/dist/js/tether.min.js"></script>
+  <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js"></script>
 </body>
 
 </html>
