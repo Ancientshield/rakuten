@@ -1,6 +1,5 @@
 <h1>Members List</h1>
-<%= link_to "New Member", new_member_path %>
-<table class="table">
+<table class="table table-hover table-bordered">
   <thead>
     <tr>
       <td>No.</td>
@@ -18,16 +17,17 @@
       <td><%= member.name %></td>
       <td><%= member.phone %></td>
       <td><%= member.email %></td>
-      <td><%= link_to 'Edit', edit_member_path(member) %></td>
       <td>
-        <%= link_to 'Delete', member_path(member), method: 'delete', data: {confirm: "Are you sure you want to delete?" } %>
+        <%= link_to 'Edit', edit_member_path(member), :class => 'btn btn-outline-secondary' %>
+      </td>
+      <td>
+        <%= link_to 'Delete', member_path(member), method: 'delete', data: {confirm: "Are you sure you want to delete?" }, :class => 'btn btn-outline-danger' %>
       </td>
     </tr>
     <% end %>
   </tbody>
 </table>
-<hr>
-<div id="app">
-  <name-card></name-card>
-  <app-2></app-2>
-</div>
+<%= link_to "New Member", new_member_path, :class => 'btn btn-outline-primary' %>
+<br>
+<br>
+<app-2></app-2>

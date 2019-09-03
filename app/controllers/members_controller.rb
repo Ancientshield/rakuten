@@ -1,7 +1,7 @@
 class MembersController < ApplicationController
   before_action :find_member, only: [:edit, :update, :destroy]
   def index
-    @members = Member.all
+    @members = Member.order(id: :asc)
   end
 
   def new
