@@ -3,22 +3,30 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+* Ruby version 6.0.0
 
-* Ruby version
+* $ git clone https://github.com/Ancientshield/rakuten.git
 
-* System dependencies
+* install Homebrew
+https://brew.sh/
 
-* Configuration
+* install ruby
+https://www.ruby-lang.org/zh_tw/documentation/installation/
 
-* Database creation
+* install RVM
+https://rvm.io/rvm/install
 
-* Database initialization
+* install node.js
+https://nodejs.org/en/ or $ brew install node
 
-* How to run the test suite
+* install yarn
+https://yarnpkg.com/lang/zh-hant/docs/install or $ brew install yarn
 
-* Services (job queues, cache servers, search engines, etc.)
+* install postgresql & start it
+https://wiki.postgresql.org/wiki/Homebrew or $ brew services start postgresql
 
-* Deployment instructions
+* $ rails db:migrate
 
-* ...
+* $ foreman start
+
+* http://localhost:3000
