@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.0'
 
-gem 'simple_form', '~> 4.1'
+gem 'simple_form', '~> 5.0'
 gem 'pg', '~> 1.1', '>= 1.1.4'
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 gem 'sassc-rails', '~> 2.1', '>= 2.1.2'
